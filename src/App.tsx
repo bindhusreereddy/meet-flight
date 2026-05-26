@@ -39,7 +39,7 @@ const App = () => {
               ipcRenderer.send('close-overlay');
             }}
           >
-            {/* Pink notification banner */}
+            {/* notification banner */}
             <div style={{
               padding: '14px 28px',
               backgroundColor: '#3B82F6',
