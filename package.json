@@ -1,0 +1,45 @@
+{
+  "name": "meet-flight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:renderer": "vite",
+    "dev:electron": "export NODE_ENV=development && electron electron-main/main.js",
+    "dev": "concurrently \"npm run dev:renderer\" \"wait-on http://localhost:5173 && npm run dev:electron\"",
+    "build:renderer": "vite build",
+    "build:electron": "tsc electron-main/main.ts --outDir dist-main",
+    "build": "npm run build:renderer && npm run build:electron"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/electron": "^1.4.38",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "autoprefixer": "^10.5.0",
+    "electron": "^42.2.0",
+    "electron-builder": "^26.8.1",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.14"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "electron-store": "^11.0.2",
+    "framer-motion": "^12.40.0",
+    "googleapis": "^172.0.0",
+    "lucide-react": "^1.16.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "wait-on": "^9.0.10"
+  }
+}
